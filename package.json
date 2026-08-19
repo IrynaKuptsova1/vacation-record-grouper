@@ -1,0 +1,21 @@
+{
+  "name": "vacation-record-grouper",
+  "version": "1.0.0",
+  "description": "Group vacation records by user",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsx index.ts",
+    "build": "tsc",
+    "node": "npm run build && node dist/index.js",
+    "bun": "bun run index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "tsx": "^4.21.0",
+    "typescript": "^7.0.2"
+  }
+}
