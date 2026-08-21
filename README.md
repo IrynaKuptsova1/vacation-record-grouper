@@ -1,8 +1,10 @@
-# vacation-record-grouper
+# Vacation Data Transformer
 
-Challenge: Vacation records -> vacation periods grouped by user
 
-Example: Input records for Ivan, Anna, and Ivan -> one output entry per user, with all of that user's vacation periods in `weekendDates`.
+### Challenge
+Convert raw vacation requests into a structured format where each user appears once with an array of all their vacation periods, stripping out redundant metadata (`usedDays`, request IDs, status).
+
+Example: Input records for Person1, Person2, Person1 -> one output entry per user, with all of that user's vacation periods in `weekendDates`.
 
 How to Run:
 ```bash
@@ -11,10 +13,10 @@ npm install
 
 # Run scripts
 npm start
-# or via Node after compiling:
+# or
 npm run node
-# or via Bun:
+# or 
 bun run index.ts
 ```
 
-This small TypeScript CLI turns a flat vacation list into a user-based summary and saves it as `output.json`. It uses Node.js file APIs, a `Map` for efficient grouping, `tsx` for a quick development run, and Bun as an alternative runtime.
+A TypeScript CLI tool that transforms flat vacation log records into clean, user-grouped vacation summaries (`output.json`). It uses Node.js file APIs, a `Map` for efficient grouping.
